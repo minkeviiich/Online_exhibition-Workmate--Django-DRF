@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Kitten, Breed, Rating, CustomUser
 
+
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
