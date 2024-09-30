@@ -24,6 +24,7 @@ class Breed(models.Model):
 
 class Kitten(models.Model):
     color = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     age = models.IntegerField()
     description = models.TextField()
     breed = models.ForeignKey(Breed, related_name='kittens', on_delete=models.CASCADE)
