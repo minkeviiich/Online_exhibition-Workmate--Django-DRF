@@ -10,6 +10,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY . /code/
 
-WORKDIR /code/mygame
+WORKDIR /code/workmate
 
 CMD ["/bin/bash", "/code/entrypoint.sh"]
