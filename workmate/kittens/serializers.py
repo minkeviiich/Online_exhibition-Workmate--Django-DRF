@@ -52,6 +52,7 @@ class KittenSerializer(ModelSerializer):
     class Meta:
         model = Kitten
         fields = '__all__'
+        read_only_fields = ['owner']
 
 
 class KittinFilter(django_filters.FilterSet):
