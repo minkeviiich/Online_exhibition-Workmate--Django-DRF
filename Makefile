@@ -1,8 +1,15 @@
-build:
-	docker compose -f docker-compose.yml build
+DOCKER_COMPOSE = docker-compose
+PYTEST = pytest
 
-up: build
-	docker compose -f docker-compose.yml up -d
+# Запуск тестов с использованием 4 ядер
+test:
+	$(DOCKER_COMPOSE) run --rm app $(PYTEST) -n 4
+
+up:
+	$(DOCKER_COMPOSE) up -d
 
 down:
-	docker compose -f docker-compose.yml down
+	$(DOCKER_COMPOSE) down
+
+build:
+	$(DOCKER_COMPOSE) build
