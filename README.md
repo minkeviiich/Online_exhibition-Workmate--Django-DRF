@@ -1,24 +1,24 @@
-## Тестовое задание Workmate-Django-DRF
-### Описание проекта
+## Workmate-Django-DRF
+### Project Description
 
-Этот проект представляет собой онлайн выставку котят, где пользователи могут регистрироваться, добавлять своих котят, оценивать их и оставлять комментарии. Основная цель проекта - создать интерактивную платформу для любителей, где они могут делиться информацией, участвовать в выставках и оценивать котят других пользователей.
+This project is an online kitten exhibition where users can register, add their kittens, rate them and leave comments. The main goal of the project is to create an interactive platform for hobbyists where they can share information, participate in exhibitions and rate other users' kittens.
 
-Основные возможности:
+Main features:
 
-1. Регистрация пользователей:
-- Пользователи могут зарегистрироваться, указав свою электронную почту, имя и другие данные. Доступны две роли: “participant” (Участник) и “visitor” (Посетитель).
-2. Управление породами:
-- Пользователи с ролью “participant” могут добавлять, редактировать и удалять породы.
-3. Управление созданием:
-- Пользователи могут добавлять информацию о своих котятах, включая цвет, имя, возраст и описание. Котята привязываются к породам и владельцам.
-4. Оценка:
-- Пользователи могут оставлять оценки и комментарии. Оценки могут быть в диапазоне от 1 до 5.
-5. Фильтрация и поиск:
-- Возможность фильтрации котят по породе.
-6. Статистика:
-- Возможность получения статистики оценок для каждого котенка.
+1. User Registration:
+- Users can register by providing their email, name and other details. Two roles are available: 'participant' and 'visitor'.
+2. Breed Management:
+- Users with the “participant” role can add, edit and delete breeds.
+3. Creation Management:
+- Users can add information about their kittens, including color, name, age, and description. Kittens are linked to breeds and owners.
+4. Evaluation:
+- Users can leave ratings and comments. Scores can range from 1 to 5.
+4. Filtering and searching:
+- Ability to filter kittens by breed.
+5. Statistics:
+- Ability to get statistics of scores for each kitten.
 
-### Технологии и библиотеки
+### Technology and libraries
 * [Python 3.10.12](https://www.python.org/doc/)
 * [Django 5.1.1](https://docs.djangoproject.com/en/4.2/)
 * [Django REST Framework  3.15.2](https://www.django-rest-framework.org/)
@@ -29,34 +29,35 @@
 * [pytest-factoryboy 2.7.0](https://pytest-factoryboy.readthedocs.io/en/stable/)
 * [Docker-Compose](https://docs.docker.com/compose/release-notes/)
 
-## Установка на локальном компьютере
-### 1. Клонируйте репозиторий:
+## Installation on local computer
+### 1. Clone the repository:
+
 ```
 git clone https://github.com/minkeviiich/Online_exhibition-Workmate--Django-DRF.git
 ```
-### 2. Сборка Docker-образа: (Команды автоматизированы с помощью Makefile)
+### 2. Build a Docker image: (Commands are automated using Makefile)
 
-- Соберите Docker-образ
+- Build the Docker image
 
 ```
 make build
 ```
 
-### 3. Запуск Docker Compose:
+### 3. Starting Docker Compose:
 
 ```
 make up
 ```
-### 4. Запуск Тестов: (Внимание: команда make test запускает тесты с использованием pytest-xdist, распределяя их выполнение на 4 процессора/ядра. Значение можно изменить в Makefile)
+### 4. Running Tests: (Note: the make test command runs tests using pytest-xdist, spreading their execution over 4 processors/core. The value can be changed in the Makefile)
 
 ```
 make test
 ```
-### 5. Остановка и удаление контейнеров:
+### 5. Stopping and removing containers:
 
 ```
 make down
 ```
 
-### __OpenAPI документация__
+### __OpenAPI documentation__
 * Swagger: http://0.0.0.0:8000/swagger/
